@@ -57,13 +57,29 @@ from Scores as s
 order by Score desc
 ```
 
-#### Approach 4: using MySQL, similar to the above, Runtime is 747 ms
+#### Approach 4: using MySQL, similar to the above, Runtime is 308 ms
 ``` MySQL script
 select Score, (select count(*) from (select distinct Score s from Scores) t 
 where s > = Score) as Rank
 from Scores
 order by Score desc
 ```
+#### Approach 5: using MySQL, quite different with the above solutions, Runtime is 427 ms
+``` MySQL script
+select Score,
+#build two variables, using @var_name.
+#set value for variables, using := (which equals to set var_name = var_value)
+@rank := @rank + (@pre <> (@pre := Score)) Rank
+from Scores, (select @rank := 0, @pre := -1) init
+order by Score desc;
+```
+#### Summary
+Great questions! Learn a lot from this question, it is useful to do multiple times for each approach!!!
+
+#### Reference (above approaches are collected based on the following website address)
+<https://www.cnblogs.com/grandyang/p/5351611.html>    
+<https://www.cnblogs.com/biwork/p/3241983.html>
+
 
 
 
