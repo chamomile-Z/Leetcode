@@ -1,3 +1,4 @@
+#### Solution
 #### Approach 1: using SQL Server's window function dense_rank(), Runtime is 1611 ms
 ```SQL Server script
 select Score, dense_rank() over(order by Score desc) as Rank
