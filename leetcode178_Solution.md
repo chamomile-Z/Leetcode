@@ -10,9 +10,9 @@ SQL Server window functions deal with the sets of rows defined by OVER syntax wh
 - Moving averages  
 - Gaps and islands   
 ##### Other functions using with OVER
-aggregate functions: SUM, COUNT, MIN, MAX  
-rank functions: RANK, DENSE_RANK, ROW_NUMBER, BTILE  
-Ditribution functions: PERCENT_RANK, CUME-DIST, PERCENTILE_CONT, PERCENTILE_DISC  
+Aggregate functions: SUM, COUNT, MIN, MAX  
+Rank functions: RANK, DENSE_RANK, ROW_NUMBER, BTILE  
+Distribution functions: PERCENT_RANK, CUME-DIST, PERCENTILE_CONT, PERCENTILE_DISC  
 Offset function: LAG, LEAD, FIRST_VALUE, LAST_VALUE
 
 In this question, dense_rank() could help to generate the result. And The following table will show clearly about 
