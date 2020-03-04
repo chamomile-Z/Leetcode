@@ -61,11 +61,13 @@ group by a.player_id, a.event_date
 ```
 
 #### Approach 4: Using MySQL, variable, Runtime: 654ms
+```MySQL
 select player_id, 
        event_date,
        @i := @i * (@p = @p:= player_id)) + games_played as games_played_so_far
 from Activity, (select @i := 0, @p := -1) init
 order by player_id, event_date
+```
 
 ##### Details
 Very great method!!!
