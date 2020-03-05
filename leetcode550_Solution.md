@@ -1,5 +1,5 @@
 #### Solution
-#### Approach 1: Using MySQL, join function
+#### Approach 1: Using MySQL, join function, Runtime: 471ms
 ```MySQL
 select round(ifnull(count(distinct b.player_id), 0) / count(distinct c.player_id), 2) as fraction
 from 
