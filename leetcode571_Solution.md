@@ -29,3 +29,8 @@ Still stucked on a hard question, could only figure out half of this question. T
 Compared the two methods, using window functions is easier to think and to write, but the runtime is still long. Using variables 
 is hard but very fast. (I still don't handle the method of writing variables in SQL.... Sad... Need more study and more practice)
 
+#### Reference
+<https://leetcode.com/problems/find-median-given-frequency-of-numbers/discuss/530392/MS-SQL-6-lines!>  
+<https://leetcode.com/problems/find-median-given-frequency-of-numbers/discuss/517487/MySQL-using-variable>  
+
+
