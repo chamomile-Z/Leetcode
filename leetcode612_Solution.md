@@ -8,6 +8,7 @@ from
     from point_2d t1, point_2d t2
 ) t
 where t.dist > 0.0
+```
 
 #### Solution1: Using MySQL, sqrt() and pow(), Runtime: 301ms
 ```MySQL
@@ -23,7 +24,7 @@ on p1.x != p2.x or p1.y != p2.y
 #### Details
 This one includes reduplicate calculations
 
-#### Solution2: Using MySQL, optimize to avoid reduplicate calculations
+#### Solution2: Using MySQL, optimize to avoid reduplicate calculations, Runtime: 169ms
 ```MySQL
 select round(sqrt(min(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2))), 2) as shortest
 from point_2d p1
