@@ -89,3 +89,6 @@ join
 ) as company_salary
 on department_salary.pay_month = company_salary.pay_month
 ```
+
+#### Reference
+<https://leetcode.com/problems/average-salary-departments-vs-company/solution/>
